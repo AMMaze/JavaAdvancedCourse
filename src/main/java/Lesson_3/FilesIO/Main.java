@@ -16,7 +16,9 @@ public class Main {
 
             concatFiles(new String[]{"src/test/aaa", "src/test/bbb"});
 
-            readPages("src/test/ccc", 1800);
+            long watch = System.currentTimeMillis();
+            readPages("src/test/bigfile", 1800);
+            System.out.println("Time: " + (System.currentTimeMillis() - watch));
         } catch (IOException e) {
             e.printStackTrace();
         }
